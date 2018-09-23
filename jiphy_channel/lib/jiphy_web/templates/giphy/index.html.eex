@@ -1,0 +1,12 @@
+<img src="<%= @image_url %>" />
+
+<script type="text/javascript">
+function connect() {
+  window.connectToChannel("<%= @image_tag %>");
+}
+if (document.readyState === 'complete' || document.readyState !== 'loading') {
+  connect()
+} else {
+  document.addEventListener('DOMContentLoaded', connect);
+}
+</script>
